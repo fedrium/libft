@@ -6,7 +6,7 @@
 /*   By: cyu-xian <cyu-xian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 13:16:26 by cyu-xian          #+#    #+#             */
-/*   Updated: 2022/04/19 16:17:45 by cyu-xian         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:39:28 by cyu-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *str;
+	size_t	i;
+	char	*str;
 
 	i = 0;
 	if (s == 0)
@@ -25,6 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else if (start + len >= ft_strlen(s))
 		len = ft_strlen(s) - start;
 	str = (char *)malloc (len + 1);
+	if (str == NULL)
+		return (NULL);
 	while (len > i && s[start] != '\0')
 	{
 		str[i] = s[start];

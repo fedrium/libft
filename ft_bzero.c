@@ -6,7 +6,7 @@
 /*   By: cyu-xian <cyu-xian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:35:05 by cyu-xian          #+#    #+#             */
-/*   Updated: 2022/04/08 12:53:43 by cyu-xian         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:33:16 by cyu-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	char *j;
+	size_t	i;
+	char	*j;
 
 	i = 0;
 	j = s;

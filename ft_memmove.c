@@ -6,7 +6,7 @@
 /*   By: cyu-xian <cyu-xian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:06:48 by cyu-xian          #+#    #+#             */
-/*   Updated: 2022/04/14 10:52:27 by cyu-xian         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:40:21 by cyu-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	char *l;
-	char *k;
+	size_t	i;
+	char	*l;
+	char	*k;
 
 	i = 0;
 	l = (char *)src;
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	{
 		while (n > i)
 		{
-			k[n - 1] = l[n - 1]; 
+			k[n - 1] = l[n - 1];
 			n--;
 		}
 	}

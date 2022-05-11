@@ -6,19 +6,19 @@
 /*   By: cyu-xian <cyu-xian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 15:24:30 by cyu-xian          #+#    #+#             */
-/*   Updated: 2022/04/11 13:35:59 by cyu-xian         ###   ########.fr       */
+/*   Updated: 2022/05/09 12:06:41 by cyu-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	 *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
-	i	= 0;
-	j 	= ft_strlen((char *)s);
+	i = 0;
+	j = ft_strlen((char *)s);
 	if (c == 0)
 		return ((char *)&s[j]);
 	if (c > 256)
