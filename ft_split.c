@@ -6,7 +6,7 @@
 /*   By: cyu-xian <cyu-xian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 14:26:51 by cyu-xian          #+#    #+#             */
-/*   Updated: 2022/05/09 15:38:16 by cyu-xian         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:54:35 by cyu-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	cnt_word(char const *str, char c)
 
 	i = 0;
 	j = 0;
-	if (!c)
+	if (c == 0)
 		return (1);
 	while (str[i] != '\0')
 	{
@@ -38,17 +38,6 @@ int	check_null_s(char const *s, char ***res)
 	if (!*s)
 	{
 		*res[0] = 0;
-		return (1);
-	}
-	return (0);
-}
-
-int	check_null_c(char c, char const *s, char ***res)
-{
-	if (!c)
-	{
-		*res[0] = ft_strdup(s);
-		*res[1] = 0;
 		return (1);
 	}
 	return (0);
@@ -74,7 +63,8 @@ char	**ft_split(char const *s, char c)
 	res = (char **)malloc(sizeof(char *) * (total_words + 1));
 	if (!res)
 		return (0);
-	if (check_null_s(s, &res) || check_null_c(c, s, &res))
+	res[total_words] = 0;
+	if (check_null_s(s, &res))
 		return (res);
 	start_dex = 0;
 	word_dex = 0;
@@ -86,6 +76,5 @@ char	**ft_split(char const *s, char c)
 		start_dex += end_dex;
 		word_dex++;
 	}
-	res[word_dex] = 0;
 	return (res);
 }
